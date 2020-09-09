@@ -19,7 +19,7 @@ class LoadFile {
     
     public function get() {//Метод возвращает данные по файлу
         $this->upload();
-        $result = array ($this->name, $this->get_size_file(), $this->get_extensions(), $this->get_md5_file());
+        $result = array ($this->get_name(), $this->get_size_file(), $this->get_extensions(), $this->get_md5_file());
         $this->delete();
         return $result;
     }
@@ -40,7 +40,11 @@ class LoadFile {
         return filesize($this->path_dir . $this->name);
     }
     
-    private function get_extensions(){
+    private function get_name() {//Метод возвращает название без расширения
+        return substr($this->name, 0 ,strrpos($this->name,'.'));
+    }
+    
+    private function get_extensions(){//Метод возвращает расширение файла
         return $this->type= substr(strtolower($this->name),strrpos($this->name,'.')+1);
     }
 }
