@@ -7,6 +7,7 @@ function init(){
 
 function Files(){
     oFiles = this.files;//Переприсваиваем при выборе файлов в глобальный массив
+    $('#LoadBtn').css('display', 'block');//Показать кнопку для загрузки файлов
 }
 
 function FilesCheked(oFile){//Метод проверяет расширение файла и его размер
@@ -36,6 +37,8 @@ function FilesErrorTable(oFilesError){//Метод формирует табли
 }
 
 function Load(){//Метод срабатывает при нажатии на кнпопку "Загрузить"
+    $('#LoadBtn').css('display', 'none');//Спрятат кнопку для загрузки файлов
+    $('#LoadProgressBar').css('display', 'block');//Показать процесс загрузки
     let oFormData = new FormData();//Создаем форму для отправки в Ajax режиме
     let oFilesError = new Map();//Создаем коллекцию для файлов, которые не будут обработаны
     if (oFiles.length!=0){//Если выбран для загрузки хотя бы один файл
@@ -69,9 +72,8 @@ function AjaxGet(oFormData){//Метод отправляет данные на 
             }
             content += '</tbody></table>';
             $('#LoadData').append(content);
+            $('#LoadProgressBar').css('display', 'none');//Спрятать процесс загрузки
             $('#LoadData').css('display', 'block');
         }
     });
 }
-
-
