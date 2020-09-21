@@ -12,11 +12,15 @@
                 <h4><p class="text-warning">Размер файла не должен превышать 80 МБ</p></h4>
                 <input type="file" class="form-control-file" id="File" multiple="true">
             </div>
-            <div class="form-group" id="LoadBtn">
+            <div class="form-group" id="LoadBtn" style="display:none;">
                 <button type="submit" class="btn btn-primary" id="Load" enabled>Загрузить</button>
             </div>
             <div class="form-group" id="LoadDataError" style="display:none;">
                 <h3><p class="text-danger">Некоторые файлы не обработанны. Они имеют неверный тип файла или превышают 80 МБ</p></h3>
+            </div>
+            <div class="form-group" id="LoadProgressBar" style="display:none;">
+                <center><h3><p class="text-danger">Идет обработка. Подождите пожалуйста.</p></h3>
+                <img src="resource/loading.gif"></center>
             </div>
             <div class="form-group" id="LoadData" style="display:none;">
                 <h3><p class="text-success">Обработанные файлы</p></h3>
@@ -24,5 +28,3 @@
         </div>
     </body>
 </html>
-
-
