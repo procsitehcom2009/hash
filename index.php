@@ -20,7 +20,7 @@
             </div>
             <div class="form-group" id="LoadProgressBar" style="display:none;">
                 <center><h3><p class="text-danger">Идет обработка. Подождите пожалуйста.</p></h3>
-                <img src="resource/loading.gif"></center>
+                <img src="resource/loading.gif" style="width: 50px"></center>
             </div>
             <div class="form-group" id="LoadData" style="display:none;">
                 <h3><p class="text-success">Обработанные файлы</p></h3>
