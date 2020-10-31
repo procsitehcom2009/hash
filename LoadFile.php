@@ -48,7 +48,7 @@ class LoadFile {
     }
     
     private function get_crc32_file(){//Метод возвращает hash crc32 файла
-        return crc32(file_get_contents($this->path_dir . $this->name));
+        return hash("crc32b",file_get_contents($this->path_dir . $this->name));
     }
      
     private function get_size_file(){//Метод возвращает размер файла
