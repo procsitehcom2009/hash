@@ -11,7 +11,7 @@
                 <h4><p class="text-warning">Файл должен иметь формат: doc, docx, odt, pdf, xls, xlsx, ods</p></h4>
                 <h4><p class="text-warning">Размер файла не должен превышать 80 МБ</p></h4>
                 <div class="radio">
-                    <h4><p class="text-danger">Выбранный тип шифрования:</p></h>
+                    <h4><p class="text-danger">Выбранный тип шифрования:</p></h4>
                     <label><input type="radio" name="encryption_type" value="crc32" checked>CRC32</label>
                     <label><input type="radio" name="encryption_type" value="md5">MD5</label>
                 </div>
