@@ -8,9 +8,9 @@ for ($i=0;$i<count($_FILES['file']['tmp_name']);$i++){//В цикле прохо
         $_FILES['file']['type'][$i],
         $_FILES['file']['tmp_name'][$i],
         $_FILES['file']['error'][$i],
-        $_FILES['file']['size'][$i]
+        $_FILES['file']['size'][$i],
+        $_POST['encryption_type']
     );
     $loadfiles[$i]=$loadfile->get();//Вызываем метод получение данных объекта класса LoadFile и вносим в массив
 }
 echo json_encode($loadfiles);//Отдаем массив данных в JSON формате
-
