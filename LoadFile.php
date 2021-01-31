@@ -47,8 +47,8 @@ class LoadFile {
         return md5_file($this->path_dir . $this->name);
     }
     
-    private function get_crc32_file(){//Метод возвращает hash crc32 файла
-        return hash("crc32b",file_get_contents($this->path_dir . $this->name));
+    private function get_crc32_file(){//Метод возвращает hash crc32 файла в 16 системе счисления
+        return dechex(crc32(file_get_contents($this->path_dir . $this->name)));
     }
      
     private function get_size_file(){//Метод возвращает размер файла
