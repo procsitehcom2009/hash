@@ -11,7 +11,7 @@ function Files(){
 }
 
 function FilesCheked(oFile){//Метод проверяет расширение файла и его размер
-    let fileExtension = ['doc', 'docx', 'odt', 'pdf', 'xls', 'xlsx', 'ods'];//Массив разрешенных расширений
+    let fileExtension = ['doc', 'docx', 'odt', 'pdf', 'xls', 'xlsx', 'ods', 'sig'];//Массив разрешенных расширений
     let type=oFile['name'].toLowerCase();//Преобразуем имя файла в нижней регистр
     type = type.substring(type.lastIndexOf('.')+1);//Получаем расширение из имени файла
     let result=0;
